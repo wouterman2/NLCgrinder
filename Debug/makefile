@@ -67,8 +67,8 @@ all: main-build
 main-build: 80482201\ -\ Grinder.elf secondary-outputs
 
 # Tool invocations
-80482201\ -\ Grinder.elf 80482201\ -\ Grinder.map: $(OBJS) $(USER_OBJS) D:\Github\nunc-grinder-stm\STM32L151RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "80482201 - Grinder.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Github\nunc-grinder-stm\STM32L151RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="80482201 - Grinder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+80482201\ -\ Grinder.elf 80482201\ -\ Grinder.map: $(OBJS) $(USER_OBJS) C:\Software\NLCgrinder\STM32L151RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "80482201 - Grinder.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Software\NLCgrinder\STM32L151RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="80482201 - Grinder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
