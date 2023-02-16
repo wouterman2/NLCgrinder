@@ -91,7 +91,7 @@ void CON_Handle(void)
 			{
 			  //Last 8 Bytes need to be ignored - read until block 227 instead of 225!
 			  memset(&CON.CardMemory[56*16-8],0,8);
-			  LED_Set(STANDBYLED,SWITCHEDON, 0, 0, 255, 100, 500, 500, 0, 0, 0);
+			  LED_Set(STANDBYLED,SWITCHEDON, 0, 255, 0, 100, 500, 500, 0, 0, 0);
 			}
 		  //Now CardMemory can be used to check the recipe
 		}
